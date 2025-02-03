@@ -1,11 +1,12 @@
 from fastapi import Depends, FastAPI
 
 from .routers import feature_extraction
-
+from .routers import users 
 app = FastAPI()
 
 
 app.include_router(feature_extraction.router)
+app.include_router(users.router)
 # app.include_router(items.router)
 # app.include_router(
 #     admin.router,
